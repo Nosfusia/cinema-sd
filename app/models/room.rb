@@ -1,3 +1,3 @@
 class Room < ApplicationRecord
-  belongs_to :movie, optional: true
+  has_many :seances
 end

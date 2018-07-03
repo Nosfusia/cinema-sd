@@ -1,4 +1,3 @@
 class Movie < ApplicationRecord
-  belongs_to :day, optional: true
-  has_many :rooms
+  has_many :seances
 end

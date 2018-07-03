@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_01_161500) do
+ActiveRecord::Schema.define(version: 2018_07_03_091936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,21 +23,28 @@ ActiveRecord::Schema.define(version: 2018_07_01_161500) do
 
   create_table "movies", force: :cascade do |t|
     t.string "name"
-    t.string "hour"
-    t.bigint "day_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["day_id"], name: "index_movies_on_day_id"
   end
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
-    t.bigint "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["movie_id"], name: "index_rooms_on_movie_id"
   end
 
-  add_foreign_key "movies", "days"
-  add_foreign_key "rooms", "movies"
+  create_table "seances", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.bigint "day_id"
+    t.bigint "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["day_id"], name: "index_seances_on_day_id"
+    t.index ["movie_id"], name: "index_seances_on_movie_id"
+    t.index ["room_id"], name: "index_seances_on_room_id"
+  end
+
+  add_foreign_key "seances", "days"
+  add_foreign_key "seances", "movies"
+  add_foreign_key "seances", "rooms"
 end

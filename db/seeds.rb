@@ -6,34 +6,209 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Movie.create!(name:"pokemon")
-Movie.create!(name:"yugioh")
-Movie.create!(name:"digimon")
-Movie.create!(name:"captain america")
-Movie.create!(name:"hulk")
 
-Movie.create!(name:"thor")
-Movie.create!(name:"spiderman")
-Movie.create!(name:"Jurassic Park")
-Movie.create!(name:"Aquaman")
-Movie.create!(name:"Batman")
+Movie.destroy_all
+Day.destroy_all
+Room.destroy_all
+Seance.destroy_all
 
-Movie.create!(name:"Superman")
-Movie.create!(name:"Flash")
-Movie.create!(name:"WonderWoman")
-Movie.create!(name:"Dragon 3")
-Movie.create!(name:"Justice League")
+Pokemon = Movie.create!(name:"pokemon")
+Yugioh = Movie.create!(name:"yugioh")
+Digimon = Movie.create!(name:"digimon")
+Captain_America = Movie.create!(name:"captain america")
 
-Movie.create!(name:"Star Wars")
-Movie.create!(name:"Naruto")
-Movie.create!(name:"Wakfu")
-Movie.create!(name:"Mutafukaz")
-Movie.create!(name:"Bambie")
+Lundi = Day.create!(name:"Lundi")
+Mardi = Day.create!(name:"Mardi")
+Mercredi = Day.create!(name:"Mercredi")
+Jeudi = Day.create!(name:"Jeudi")
+Vendredi = Day.create!(name:"Vendredi")
+Samedi = Day.create!(name:"Samedi")
+Dimanche = Day.create!(name:"Dimanche")
 
-Day.create!(name:"Lundi")
-Day.create!(name:"Mardi")
-Day.create!(name:"Mercredi")
-Day.create!(name:"Jeudi")
-Day.create!(name:"Vendredi")
-Day.create!(name:"Samedi")
-Day.create!(name:"Dimanche")
+One = Room.create!(name:"One")
+Two = Room.create!(name:"Two")
+Three = Room.create!(name:"Three")
+Four = Room.create!(name:"Four")
+Five = Room.create!(name:"Five")
+
+# Lundi
+
+Seance.create(movie_id: Pokemon.id, day_id: Lundi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Lundi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Lundi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Lundi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Lundi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Lundi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Lundi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Lundi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Lundi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Lundi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Lundi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Lundi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Lundi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Lundi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Lundi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Lundi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Lundi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Lundi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Lundi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Lundi.id, room_id: Five.id)
+
+# Mardi
+
+Seance.create(movie_id: Pokemon.id, day_id: Mardi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mardi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mardi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mardi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mardi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Mardi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mardi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mardi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mardi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mardi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Mardi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Mardi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Mardi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Mardi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Mardi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Mardi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mardi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mardi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mardi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mardi.id, room_id: Five.id)
+
+# Mercredi
+
+Seance.create(movie_id: Pokemon.id, day_id: Mercredi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mercredi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mercredi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mercredi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Mercredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Mercredi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mercredi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mercredi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mercredi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Mercredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Mercredi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Mercredi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Mercredi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Mercredi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Mercredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Mercredi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mercredi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mercredi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mercredi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Mercredi.id, room_id: Five.id)
+
+# Jeudi
+
+Seance.create(movie_id: Pokemon.id, day_id: Jeudi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Jeudi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Jeudi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Jeudi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Jeudi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Jeudi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Jeudi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Jeudi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Jeudi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Jeudi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Jeudi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Jeudi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Jeudi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Jeudi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Jeudi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Jeudi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Jeudi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Jeudi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Jeudi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Jeudi.id, room_id: Five.id)
+
+# Vendredi
+
+Seance.create(movie_id: Pokemon.id, day_id: Vendredi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Vendredi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Vendredi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Vendredi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Vendredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Vendredi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Vendredi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Vendredi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Vendredi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Vendredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Vendredi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Vendredi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Vendredi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Vendredi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Vendredi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Vendredi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Vendredi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Vendredi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Vendredi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Vendredi.id, room_id: Five.id)
+
+# Samedi
+
+Seance.create(movie_id: Pokemon.id, day_id: Samedi.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Samedi.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Samedi.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Samedi.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Samedi.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Samedi.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Samedi.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Samedi.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Samedi.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Samedi.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Samedi.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Samedi.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Samedi.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Samedi.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Samedi.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Samedi.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Samedi.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Samedi.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Samedi.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Samedi.id, room_id: Five.id)
+
+# Dimanche
+
+Seance.create(movie_id: Pokemon.id, day_id: Dimanche.id, room_id: One.id)
+Seance.create(movie_id: Pokemon.id, day_id: Dimanche.id, room_id: Two.id)
+Seance.create(movie_id: Pokemon.id, day_id: Dimanche.id, room_id: Three.id)
+Seance.create(movie_id: Pokemon.id, day_id: Dimanche.id, room_id: Four.id)
+Seance.create(movie_id: Pokemon.id, day_id: Dimanche.id, room_id: Five.id)
+
+Seance.create(movie_id: Yugioh.id, day_id: Dimanche.id, room_id: One.id)
+Seance.create(movie_id: Yugioh.id, day_id: Dimanche.id, room_id: Two.id)
+Seance.create(movie_id: Yugioh.id, day_id: Dimanche.id, room_id: Three.id)
+Seance.create(movie_id: Yugioh.id, day_id: Dimanche.id, room_id: Four.id)
+Seance.create(movie_id: Yugioh.id, day_id: Dimanche.id, room_id: Five.id)
+
+Seance.create(movie_id: Digimon.id, day_id: Dimanche.id, room_id: One.id)
+Seance.create(movie_id: Digimon.id, day_id: Dimanche.id, room_id: Two.id)
+Seance.create(movie_id: Digimon.id, day_id: Dimanche.id, room_id: Three.id)
+Seance.create(movie_id: Digimon.id, day_id: Dimanche.id, room_id: Four.id)
+Seance.create(movie_id: Digimon.id, day_id: Dimanche.id, room_id: Five.id)
+
+Seance.create(movie_id: Captain_America.id, day_id: Dimanche.id, room_id: One.id)
+Seance.create(movie_id: Captain_America.id, day_id: Dimanche.id, room_id: Two.id)
+Seance.create(movie_id: Captain_America.id, day_id: Dimanche.id, room_id: Three.id)
+Seance.create(movie_id: Captain_America.id, day_id: Dimanche.id, room_id: Four.id)
+Seance.create(movie_id: Captain_America.id, day_id: Dimanche.id, room_id: Five.id)

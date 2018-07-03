@@ -1,4 +1,5 @@
-<h1>Days#show</h1>
-<p>Find me in app/views/days/show.html.erb</p>
+<h1>Toutes les séances du <%= @day.name %></h1>
 
-<%= @day.name %>
+<% @day.seances.each do |seance| %>
+<h3>  <%= seance.movie.name  %> dans la salle <%= seance.room.name %></h3>
+<% end %>
