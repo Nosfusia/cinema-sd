@@ -1,5 +1,8 @@
-<h1>Toutes les séances du <%= @day.name %></h1>
-
-<% @day.seances.each do |seance| %>
-<h3>  <%= seance.movie.name  %> dans la salle <%= seance.room.name %></h3>
+<h1><%= @day.name %></h1>
+<% @day.movies.uniq.each do |movie| %>
+  <ul>
+    <li><%= link_to movie_path(movie) do %>
+      <h3> <%= movie.name  %></h3>
+    <% end %></li>
+  </ul>
 <% end %>
