@@ -1,8 +1,8 @@
 <h1><%= @day.name %></h1>
 <% @day.movies.uniq.each do |movie| %>
   <ul>
-    <li><%= link_to movie_path(movie) do %>
-      <h3> <%= movie.name  %></h3>
+    <li><%= link_to day_movie_path(movie) do %>
+      <h4> <%= movie.name  %></h4>
     <% end %></li>
   </ul>
 <% end %>

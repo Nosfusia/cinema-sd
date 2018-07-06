@@ -7,3 +7,4 @@ class DaysController < ApplicationController
     @day = Day.find(params[:id])
   end
 end
+

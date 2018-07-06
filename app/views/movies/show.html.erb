@@ -1,5 +1,10 @@
-<h1><%= @movie.name %></h1>
 
-<% @movie.rooms.uniq.each do |room| %>
-    <h3> Séance dans la salle <%= room.name %></h3>
-<% end %>
+<h1>Film :<%= @movie.name %></h1>
+
+<% film_id = params[:day_id] %>
+<% jour_id = params[:id] %>
+
+<% seance = Seance.find_by(movie_id: @movie, day_id: jour_id)%>
+
+<h3>La/Les séance(s) de ce film sont en salle <%= seance.name %>.</h3>
+
